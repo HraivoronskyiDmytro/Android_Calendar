@@ -1,4 +1,4 @@
-# Appium based test framework with simple tests for Calendar app (Android)
+# Appium based test framework solution with simple tests for Calendar app (Android)
 
 edit /src/test/resources/device.properties according to your appium & device configuration (set name of your device to deviceName property e.t.c.)
 
