@@ -18,7 +18,7 @@ public class SearchPage extends Common {
     }
 
     public void searchEvent() {
-        getElement(searchPageObjects.searchInput).sendKeys("kfz24_tech_task\n");
+        getElement(searchPageObjects.searchInput).sendKeys("kfz24_tech_task\\n");
     }
 
     public void checkEventPresent() {

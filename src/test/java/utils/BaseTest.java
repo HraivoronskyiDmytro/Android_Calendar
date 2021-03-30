@@ -22,7 +22,7 @@ import java.util.Date;
 public class BaseTest {
 
     private Logger logger = Logger.getLogger(BaseTest.class);
-    private AppiumDriver driver;
+    protected AppiumDriver driver;
     protected MainPage mainPage;
     protected MenuPage menuPage;
     protected NewEventPage newEventPage;
@@ -32,6 +32,7 @@ public class BaseTest {
     public void connect() throws Exception {
         this.driver = new Appium().init();
         driver.activateApp("com.google.android.calendar");
+        mainPage= new MainPage(driver);
     }
 
     @BeforeMethod

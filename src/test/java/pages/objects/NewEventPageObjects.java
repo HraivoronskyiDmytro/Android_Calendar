@@ -5,9 +5,9 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class NewEventPageObjects {
 
-    @AndroidFindBy(id = "//*[contains(@resource-id,'title')]")
+    @AndroidFindBy(xpath = "//*[contains(@resource-id,'title')]")
     public MobileElement titleInput;
 
-    @AndroidFindBy(id = "//*[contains(@resource-id,'save')]")
+    @AndroidFindBy(xpath = "//*[contains(@resource-id,'save')]")
     public MobileElement saveButton;
 }

@@ -3,6 +3,7 @@ package utils;
 import config.ReadProperties;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -20,6 +21,8 @@ public class Appium {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, properties.getValue("platformVersion"));
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, properties.getValue("deviceName"));
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, properties.getValue("appPackage"));
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, properties.getValue("appActivity"));
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 30);
 
         return new AndroidDriver(new URL(properties.getValue("URL")), capabilities);
